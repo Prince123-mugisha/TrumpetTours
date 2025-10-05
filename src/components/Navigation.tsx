@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Calendar } from "lucide-react";
+import trumpetLogo from "@/assets/trumpet-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,9 +22,11 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-3">
+            <img src={trumpetLogo} alt="Trumpet Tours Logo" className="h-12 w-12" />
             <div className="text-2xl font-bold">
-              <span className="text-safari-gold">Trumpet</span>
+              <span className="text-safari-gold">TRUMPET</span>
+              <span className="text-white text-sm ml-1">TOURS</span>
             </div>
           </Link>
 

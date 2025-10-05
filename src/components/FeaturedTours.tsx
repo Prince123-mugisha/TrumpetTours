@@ -44,20 +44,77 @@ const tours = [
 
 const FeaturedTours = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center space-x-2 bg-safari-gold/10 border border-safari-gold/30 rounded-full px-4 py-2 mb-4">
-            <span className="w-2 h-2 bg-safari-gold rounded-full" />
-            <span className="text-safari-gold text-sm font-medium">FEATURED TOURS</span>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+          {/* Left Content */}
+          <div className="space-y-6">
+            <div className="inline-flex items-center space-x-2 bg-safari-gold/10 border border-safari-gold/30 rounded-full px-4 py-2">
+              <span className="w-2 h-2 bg-safari-gold rounded-full" />
+              <span className="text-safari-gold text-sm font-medium">OUR POPULAR TOURS</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-safari-darker">
+              Best Gorilla and Wildlife
+              <br />
+              Safaris
+            </h2>
+            <p className="text-lg text-gray-600">
+              Embark on unforgettable adventures and explore diverse itineraries
+              promising ultimate exploration. Our most popular tours include
+              thrilling gorilla encounters and captivating wildlife expeditions,
+              taking you deep into nature's wonders. Traverse lush forests,
+              encounter majestic creatures, and create lasting memories on every
+              journey with Trumpet Tours.
+            </p>
+            <Button className="bg-safari-gold text-safari-darker hover:bg-safari-gold/90 font-semibold">
+              Discover more
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-safari-darker mb-4">
-            SAFARI EXPERIENCES
-          </h2>
-          <p className="text-lg text-gray-600">
-            Discover Eastern Africa's wildlife and landscapes through expertly guided adventures.
-          </p>
+
+          {/* Right Grid */}
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-4">
+              <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 mt-12">
+                <div className="relative h-64">
+                  <img src="/images/inye.jpeg" alt="Gorilla & Golden Monkey" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-safari-darker/90 to-transparent" />
+                  <p className="absolute bottom-4 left-4 right-4 text-white font-semibold text-sm">
+                    4 Days Gorilla & Golden Monkey Treks
+                  </p>
+                </div>
+              </Card>
+              <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="relative h-64">
+                  <img src="/images/lolo.jpeg" alt="Wildlife Safari" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-safari-darker/90 to-transparent" />
+                  <p className="absolute bottom-4 left-4 right-4 text-white font-semibold text-sm">
+                    10 Days Rwanda Wildlife Safari
+                  </p>
+                </div>
+              </Card>
+            </div>
+            <div className="space-y-4">
+              <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 mt-12">
+                <div className="relative h-64">
+                  <img src="/images/tour.jpeg" alt="Rwanda Safari" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-safari-darker/90 to-transparent" />
+                  <p className="absolute bottom-4 left-4 right-4 text-white font-semibold text-sm">
+                    8 Days Rwanda Safari Tour
+                  </p>
+                </div>
+              </Card>
+              <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="relative h-64">
+                  <img src="/images/conve.jpg" alt="Luxury Tour" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-safari-darker/90 to-transparent" />
+                  <p className="absolute bottom-4 left-4 right-4 text-white font-semibold text-sm">
+                    12 Days Luxury Wildlife Tour to Rwanda
+                  </p>
+                </div>
+              </Card>
+            </div>
+          </div>
         </div>
 
         {/* Tours Grid */}

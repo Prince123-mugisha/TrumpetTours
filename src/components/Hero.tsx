@@ -21,20 +21,19 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-safari-gold/30 rounded-full px-4 py-2">
             <span className="w-2 h-2 bg-safari-gold rounded-full animate-pulse" />
-            <span className="text-safari-gold text-sm font-medium">EASTERN AFRICA EXPEDITIONS</span>
+            <span className="text-safari-gold text-sm font-medium">Welcome to</span>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-            Experience
+            <span className="tracking-wider">T R U M P E T</span>
             <br />
-            <span className="italic font-serif">Rwanda Safari Tours</span>
+            <span className="text-safari-gold tracking-wide">T O U R S</span>
           </h1>
 
           {/* Description */}
           <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-            Discover Eastern Africa's breathtaking landscapes and wildlife through
-            expertly curated safari adventures.
+            Discover beyond the untamed beauty of Africa's wildlife adventures with us
           </p>
 
           {/* CTA Buttons */}
