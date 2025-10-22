@@ -64,7 +64,7 @@ const AboutUs = () => {
               <div className="text-sm text-white">Safari Tours</div>
             </Card>
             <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">99%</div>
+              <div className="text-4xl font-bold text-white">95%</div>
               <div className="text-sm text-white">Success Rate</div>
             </Card>
           </div>
@@ -186,7 +186,7 @@ const AboutUs = () => {
               <div className="mt-2 text-sm text-white/70">Safari Tours</div>
             </div>
             <div>
-              <div className="text-4xl font-bold">99%</div>
+              <div className="text-4xl font-bold">95%</div>
               <div className="mt-2 text-sm text-white/70">Success Rate</div>
             </div>
           </div>

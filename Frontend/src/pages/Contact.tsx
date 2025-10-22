@@ -102,7 +102,7 @@ const Contact = () => {
                 <MdEmail className="w-4 h-4" />
               </div>
               <div className="text-base font-semibold text-white break-words">
-                trumpettoursrwanda@gmail.com
+                 trumpettoursafaris@gmail.com
               </div>
               <div className="text-xs text-white/80">Quick Response</div>
             </div>
@@ -220,7 +220,7 @@ const Contact = () => {
                 <strong>Phone:</strong> +250 793 766 308
               </p>
               <p className="text-sm mb-2">
-                <strong>Email:</strong> trumpettoursrwanda@gmail.com
+                <strong>Email:</strong> trumpettoursafaris@gmail.com
               </p>
             </div>
 
@@ -245,7 +245,7 @@ const Contact = () => {
                 Chat with us on WhatsApp
               </a>
               <p className="text-xs text-gray-500 mt-3">
-                Available Mon–Sun, 6:00 AM – 10:00 PM EAT
+                Available Mon–Sun, 11:00 AM – 10:00 PM EAT
               </p>
             </div>
 

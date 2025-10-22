@@ -118,7 +118,7 @@ const Services = () => {
 
           <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
             <Button size="lg" className="bg-safari-gold text-black hover:bg-safari-gold/90 font-semibold">
-              Get Quote
+              Plan Your Trip 
             </Button>
             <Button size="lg" variant="outline" className="bg-transparent text-white border border-white/30 hover:bg-safari-gold">
               View Tours
@@ -484,7 +484,7 @@ const Services = () => {
               <div className="mt-2 text-sm text-white/70">Safari Tours</div>
             </div>
             <div>
-              <div className="text-4xl font-bold">99%</div>
+              <div className="text-4xl font-bold">95%</div>
               <div className="mt-2 text-sm text-white/70">Success Rate</div>
             </div>
           </div>
