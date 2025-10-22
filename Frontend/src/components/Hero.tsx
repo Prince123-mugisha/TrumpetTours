@@ -60,7 +60,7 @@ const Hero = () => {
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-            <span className="italic font-serif">Trumpent Tours</span>
+            <span className="italic font-serif">Trumpet Tours</span>
           </h1>
 
           {/* Description */}
