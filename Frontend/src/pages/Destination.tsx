@@ -6,7 +6,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import HeroImage from "@/Assets/kivu.jpg";
 
+import { useState } from "react";
+import { TripPlannerDialog } from "../components/ui/trip-planner-dialog";
+
 const Destination = () => {
+  const [showTripPlanner, setShowTripPlanner] = useState(false);
+
   return (
     <div className="min-h-screen bg-white text-safari-darker">
       <Navigation />
@@ -34,14 +39,6 @@ const Destination = () => {
             Embark on an extraordinary journey through East Africa's most captivating destinations. 
             From mountain gorillas to savannah safaris, create memories that will last a lifetime.
           </p>
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <Button size="lg" className="bg-safari-gold text-black hover:bg-safari-gold/90 font-semibold">
-              Start Planning
-            </Button>
-            <Button size="lg" variant="outline" className="bg-transparent text-white border-white/30 hover:bg-white/10 hover:text-white/90 font-semibold">
-              View Tour Packages
-            </Button>
-          </div>
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
               <div className="text-4xl font-bold text-white">2</div>
@@ -158,8 +155,16 @@ const Destination = () => {
             memories that will last a lifetime.
           </p>
           <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
-            <Button size="lg" className="bg-safari-gold text-safari-darker hover:bg-safari-gold/90 font-semibold">Plan Your Custom Safari</Button>
-            <Button size="lg" variant="outline" className="bg-transparent text-white border border-white/30 hover:bg-white/10">View All Tours</Button>
+            <Button 
+              size="lg" 
+              className="bg-safari-gold text-black hover:bg-safari-gold/90 font-semibold"
+              onClick={() => setShowTripPlanner(true)}
+            >
+              Plan Your Custom Trip
+            </Button>
+            <Link to="/itineraries">
+              <Button size="lg" variant="outline" className="bg-transparent text-white border border-white/30 hover:bg-white">View All Itineraries</Button>
+            </Link>
           </div>
 
           <div className="mt-12 border-t border-white/10" />
@@ -178,7 +183,7 @@ const Destination = () => {
               <div className="mt-2 text-sm text-white/70">Safari Tours</div>
             </div>
             <div>
-              <div className="text-4xl font-bold">99%</div>
+              <div className="text-4xl font-bold">95%</div>
               <div className="mt-2 text-sm text-white/70">Success Rate</div>
             </div>
           </div>
@@ -186,6 +191,12 @@ const Destination = () => {
       </section>
 
       <Footer />
+
+      {/* Trip Planner Dialog */}
+      <TripPlannerDialog 
+        open={showTripPlanner} 
+        onOpenChange={setShowTripPlanner}
+      />
     </div>
   );
 };

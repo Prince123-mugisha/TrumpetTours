@@ -20,8 +20,14 @@ import imgTransport from "@/Assets/service6.jpeg";
 import imgRental from "@/Assets/carRental.jpg";
 import imgGreet from "@/Assets/group.jpeg";
 import Footer from "@/components/Footer";
+import { Link} from "react-router-dom";
+
+import { useState } from "react";
+import { TripPlannerDialog } from "../components/ui/trip-planner-dialog";
 
 const Services = () => {
+  const [showTripPlanner, setShowTripPlanner] = useState(false);
+  
   const services = [
     {
       title: "Guided Tours and Safaris",
@@ -117,12 +123,18 @@ const Services = () => {
           </p>
 
           <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
-            <Button size="lg" className="bg-safari-gold text-black hover:bg-safari-gold/90 font-semibold">
+            <Button 
+              size="lg" 
+              className="bg-safari-gold text-black hover:bg-safari-gold/90 font-semibold"
+              onClick={() => setShowTripPlanner(true)}
+            >
               Plan Your Trip 
             </Button>
-            <Button size="lg" variant="outline" className="bg-transparent text-white border border-white/30 hover:bg-safari-gold">
-              View Tours
-            </Button>
+            <Link to="/Destination">
+              <Button size="lg" variant="outline" className="bg-transparent text-white border border-white/30 hover:bg-safari-gold">
+                View Tours
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -464,8 +476,16 @@ const Services = () => {
             memories that will last a lifetime.
           </p>
           <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
-            <Button size="lg" className="bg-safari-gold text-black hover:bg-safari-gold/90 font-semibold">Plan Your Custom Safari</Button>
-            <Button size="lg" variant="outline" className="bg-transparent text-white border border-white/30 hover:bg-white/10 hover:text-white">View All Tours</Button>
+            <Button 
+              size="lg" 
+              className="bg-safari-gold text-black hover:bg-safari-gold/90 font-semibold"
+              onClick={() => setShowTripPlanner(true)}
+            >
+              Plan Your Custom Trip
+            </Button>
+            <Link to="/Destination">
+              <Button size="lg" variant="outline" className="bg-transparent text-white border border-white/30 hover:bg-white/10 hover:text-white">View All Tours</Button>
+            </Link>
           </div>
 
           <div className="mt-12 border-t border-white/10" />
@@ -492,6 +512,12 @@ const Services = () => {
       </section>
 
       <Footer />
+
+      {/* Trip Planner Dialog */}
+      <TripPlannerDialog 
+        open={showTripPlanner} 
+        onOpenChange={setShowTripPlanner}
+      />
     </div>
   );
 };
