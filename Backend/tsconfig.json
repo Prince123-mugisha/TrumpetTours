@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    /* === File Paths === */
+    "rootDir": ".",
+    "outDir": "./dist",
+
+    /* === Target Environment === */
+    "target": "ES2020",
+    "module": "commonjs",
+
+    /* === Node.js Support === */
+    "lib": ["esnext"],
+    "types": ["node"],
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+
+    /* === TypeScript Strictness === */
+    "strict": true,
+    "skipLibCheck": true,
+
+    /* === Source Maps (optional, useful for debugging) === */
+    "sourceMap": true
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
