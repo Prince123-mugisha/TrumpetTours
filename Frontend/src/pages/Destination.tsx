@@ -68,7 +68,7 @@ const Destination = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Rwanda Card */}
-            <Link to="/rwanda">
+            <Link to="/destinations/rwanda">
               <Card className="group overflow-hidden border-2 border-gray-200 hover:border-safari-gold transition-all duration-300 hover:shadow-2xl cursor-pointer">
                 <div className="relative h-64 overflow-hidden">
                   <img 
@@ -107,7 +107,7 @@ const Destination = () => {
             </Link>
 
             {/* Uganda Card */}
-            <Link to="/uganda">
+            <Link to="/destinations/uganda">
               <Card className="group overflow-hidden border-2 border-gray-200 hover:border-safari-gold transition-all duration-300 hover:shadow-2xl cursor-pointer">
                 <div className="relative h-64 overflow-hidden">
                   <img 
