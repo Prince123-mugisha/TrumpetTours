@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -24,10 +25,24 @@ interface Itinerary {
 }
 
 const PackagesHero = () => {
+  const location = useLocation();
   const [activeTab, setActiveTab] = useState("Itinerary");
   const [open, setOpen] = useState(false);
   const [selectedItinerary, setSelectedItinerary] = useState<Itinerary | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    const state = location.state as { selectedPackage?: string };
+    if (state?.selectedPackage) {
+      const itinerary = itineraries.find(i => i.id === state.selectedPackage);
+      if (itinerary) {
+        setSelectedItinerary(itinerary);
+        setIsModalOpen(true);
+      }
+      // Clear the state to prevent reopening on page refresh
+      window.history.replaceState({}, document.title);
+    }
+  }, [location.state]);
 
   const itineraries: Itinerary[] = [
    {

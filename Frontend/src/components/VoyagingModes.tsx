@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 import solo from "@/Assets/solo.jpg"
 import couple from "@/Assets/couple.webp"
 import group from "@/Assets/group.jpeg"
@@ -6,14 +7,20 @@ import luxury from "@/Assets/luxury.jpg"
 import family from "@/Assets/family.jpg"
 
 const packages = [
-  { title: "Solo Tour Packages", image: solo },
-  { title: "Couple Tour Packages", image: couple},
-  { title: "Group Tour Packages", image: group },
-  { title: "Luxury Tour Packages", image: luxury },
-  { title: "Family Tour Packages", image: family }
+  { title: "Solo Tour Packages", image: solo, id: "solo" },
+  { title: "Couple Tour Packages", image: couple, id: "couples" },
+  { title: "Group Tour Packages", image: group, id: "group" },
+  { title: "Luxury Tour Packages", image: luxury, id: "luxury" },
+  { title: "Family Tour Packages", image: family, id: "family" }
 ];
 
 const VoyagingModes = () => {
+  const navigate = useNavigate();
+
+  const handlePackageClick = (packageId: string) => {
+    navigate('/itineraries/packages', { state: { selectedPackage: packageId } });
+  };
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -28,7 +35,11 @@ const VoyagingModes = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {packages.map((pkg, index) => (
-            <Card key={index} className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
+            <Card 
+              key={index} 
+              className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+              onClick={() => handlePackageClick(pkg.id)}
+            >
               <div className="relative h-64">
                 <img
                   src={pkg.image}
