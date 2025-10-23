@@ -53,7 +53,7 @@ const Destination = () => {
               <div className="text-sm text-white">Tour Options</div>
             </Card>
             <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">24/7</div>
+              <div className="text-4xl font-bold text-white">12/5</div>
               <div className="text-sm text-white">Support</div>
             </Card>
           </div>
@@ -171,11 +171,11 @@ const Destination = () => {
 
           <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div>
-              <div className="text-4xl font-bold">15+</div>
+              <div className="text-4xl font-bold">10+</div>
               <div className="mt-2 text-sm text-white/70">Years Experience</div>
             </div>
             <div>
-              <div className="text-4xl font-bold">5,000+</div>
+              <div className="text-4xl font-bold">500+</div>
               <div className="mt-2 text-sm text-white/70">Happy Travelers</div>
             </div>
             <div>

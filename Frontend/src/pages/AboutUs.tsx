@@ -52,11 +52,11 @@ const AboutUs = () => {
           </div>
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-white">
             <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">15+</div>
+              <div className="text-4xl font-bold text-white">10+</div>
               <div className="text-sm text-white">Years Experience</div>
             </Card>
             <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">5,000+</div>
+              <div className="text-4xl font-bold text-white">500+</div>
               <div className="text-sm text-white">Happy Travelers</div>
             </Card>
             <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
@@ -174,11 +174,11 @@ const AboutUs = () => {
 
           <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div>
-              <div className="text-4xl font-bold">15+</div>
+              <div className="text-4xl font-bold">10+</div>
               <div className="mt-2 text-sm text-white/70">Years Experience</div>
             </div>
             <div>
-              <div className="text-4xl font-bold">5,000+</div>
+              <div className="text-4xl font-bold">500+</div>
               <div className="mt-2 text-sm text-white/70">Happy Travelers</div>
             </div>
             <div>

@@ -4,12 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Link } from "react-router-dom";
 import heroImage from "@/Assets/uganda.jpg";
 import bwindiImage from "@/Assets/Bwindi.jpg";
 import kibaleImage from "@/Assets/Kibale-chimpanzees.jpg";
@@ -21,7 +23,11 @@ import mburoImage from "@/Assets/Lake Mburo.jpg";
 import elgonImage from "@/Assets/Mountain-Elgon-National-Park.jpg";
 import semulikImage from "@/Assets/Kibale-chimpanzees.jpg";
 
+import { TripPlannerDialog } from "@/components/ui/trip-planner-dialog";
+import { useState } from "react";
+
 const Uganda = () => {
+  const [showTripPlanner, setShowTripPlanner] = useState(false);
   const destinations = [
     {
       name: "Bwindi Impenetrable Forest",
@@ -107,12 +113,18 @@ const Uganda = () => {
             Encounter incredible wildlife, track gorillas and chimps, and discover the warmth of the Pearl of Africa.
           </p>
           <div className="mt-8 flex items-center justify-center gap-4">
-            <Button size="lg" className="bg-safari-gold text-black hover:bg-safari-gold/90 font-semibold">
-              Plan Your Uganda Safari
+            <Button 
+              size="lg" 
+              className="bg-safari-gold text-black hover:bg-safari-gold/90 font-semibold"
+              onClick={() => setShowTripPlanner(true)}
+            >
+              Plan Your Uganda Trip 
             </Button>
-            <Button size="lg" variant="outline" className="bg-transparent text-white border-white/30 hover:bg-white/10 hover:text-white font-semibold">
-              View Destinations
-            </Button>
+            <Link to="/itineraries/uganda">
+              <Button size="lg" variant="outline" className="bg-transparent text-white border-white/30 hover:bg-white/10 hover:text-white font-semibold">
+                View Itineraries
+              </Button>
+            </Link>
           </div>
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
@@ -124,11 +136,11 @@ const Uganda = () => {
               <div className="text-sm text-white">Bird Species</div>
             </Card>
             <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">6+</div>
-              <div className="text-sm text-white">UNESCO Sites</div>
+              <div className="text-4xl font-bold text-white">10+</div>
+              <div className="text-sm text-white">Museums</div>
             </Card>
             <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">100%</div>
+              <div className="text-4xl font-bold text-white">90%</div>
               <div className="text-sm text-white">Safe Travel</div>
             </Card>
           </div>
@@ -323,9 +335,18 @@ const Uganda = () => {
                           </div>
 
                           <div className="mt-6 flex justify-end gap-3">
-                            <Button className="bg-safari-gold text-black font-semibold hover:bg-safari-gold/90">
-                              Plan Your Visit
-                            </Button>
+                            <DialogClose asChild>
+                              <Button 
+                                className="bg-safari-gold text-black font-semibold hover:bg-safari-gold/90"
+                                onClick={() => {
+                                  setTimeout(() => {
+                                    setShowTripPlanner(true); // Open the trip planner dialog after the current dialog closes
+                                  }, 100);
+                                }}
+                              >
+                                Plan Your Visit
+                              </Button>
+                            </DialogClose>
                           </div>
                         </div>
                       </DialogContent>
@@ -339,6 +360,10 @@ const Uganda = () => {
       </section>
 
       <Footer />
+      <TripPlannerDialog 
+        open={showTripPlanner}
+        onOpenChange={setShowTripPlanner}
+      />
     </div>
   );
 };

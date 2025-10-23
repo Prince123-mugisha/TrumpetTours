@@ -5,16 +5,64 @@ import { Instagram, MapPin, Mail, Phone, Calendar } from "lucide-react";
 import { navLinks } from "@/components/Navigation";
 import rdbLogo from "@/Assets/Rdblogo.png";
 import visitRwandaLogo from "@/Assets/visitRwanda.jpg";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 
 const Footer = () => {
   const quickLinks = navLinks;
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [email, setEmail] = useState("");
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xovkboov", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({ 
+          email,
+          subject: "Newsletter Subscription",
+          message: "New newsletter subscription request"
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Success!",
+          description: "Thank you for subscribing to our newsletter!",
+          variant: "default",
+        });
+        setEmail("");
+      } else {
+        toast({
+          title: "Error",
+          description: "Failed to subscribe. Please try again later.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Network error. Please check your connection.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const tourCategories = [
-    { name: "Wildlife Safari", href: "/tours/wildlife" },
-    { name: "Gorilla Trekking", href: "/tours/gorilla" },
-    { name: "Cultural Tours", href: "/tours/cultural" },
-    { name: "Luxury Safari", href: "/tours/luxury" },
-    { name: "Family Adventures", href: "/tours/family" },
+    { name: "Rwanda Safari", href: "/destinations/rwanda" },
+    { name: "Uganda Safari", href: "/destinations/uganda" },
+    { name: "Gorilla Trekking", href: "/itineraries/packages" },
+    { name: "Luxury Safari", href: "/itineraries/packages" },
+    { name: "Family Adventures", href: "/itineraries/packages" },
   ];
 
   return (
@@ -43,7 +91,7 @@ const Footer = () => {
                   href="mailto:trumpettoursrwanda@gmail.com"
                   className="hover:text-safari-gold transition-colors"
                 >
-                  trumpettoursrwanda@gmail.com
+                  trumpettoursafaris@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-white/70">
@@ -131,22 +179,29 @@ const Footer = () => {
               Subscribe to our newsletter for the latest travel tips, conservation
               stories, and exclusive safari offers.
             </p>
-            <div className="space-y-3">
+            <form onSubmit={handleNewsletterSubmit} className="space-y-3">
               <Input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
+                required
                 className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
               />
-              <Button className="w-full bg-safari-gold text-safari-darker hover:bg-safari-gold/90 font-medium">
-                Subscribe
+              <Button 
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-safari-gold text-safari-darker hover:bg-safari-gold/90 font-medium"
+              >
+                {isSubmitting ? "Subscribing..." : "Subscribe"}
               </Button>
-            </div>
+            </form>
             <div className="flex items-center space-x-4 mt-6">
               <span className="text-white/70">Follow us:</span>
 
               {/* Instagram */}
               <a
-                href="https://instagram.com/trumpet_rwanda"
+                href="https://www.instagram.com/trumpet_tours/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"

@@ -41,23 +41,6 @@ const Itineraries = () => {
             East Africa — blending wildlife, culture, and adventure into
             unforgettable travel experiences.
           </p>
-
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <Button
-              size="lg"
-              className="bg-safari-gold text-black hover:bg-safari-gold/90 font-semibold"
-            >
-              Start Exploring
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-transparent text-white border-white/30 hover:bg-white/10 hover:text-white/90 font-semibold"
-            >
-              View Packages
-            </Button>
-          </div>
-
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
               <div className="text-4xl font-bold">3</div>
@@ -192,21 +175,6 @@ const Itineraries = () => {
             Whether you’re looking for adventure, relaxation, or cultural immersion,
             our custom itineraries are designed to fit your dream journey.
           </p>
-          <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
-            <Button
-              size="lg"
-              className="bg-safari-gold text-safari-darker hover:bg-safari-gold/90 font-semibold"
-            >
-              Plan Custom Trip
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-transparent text-white border border-white/30 hover:bg-white/10"
-            >
-              View Sample Tours
-            </Button>
-          </div>
         </div>
       </section>
 

@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Navigation  from "@/components/Navigation";
+import { TripPlannerDialog } from "@/components/ui/trip-planner-dialog";
 import {
   Dialog,
   DialogContent,
@@ -8,6 +10,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  DialogClose,
 } from "@/components/ui/dialog";
 import Footer from "@/components/Footer";
 import heroImage from "@/Assets/rwandaHills.jpg";
@@ -21,9 +24,11 @@ import kigaliImage from "@/Assets/Kigali-City.jpg";
 import kingspalaceImage from "@/Assets/Kings-Palace.jpg";
 import genocideImage from "@/Assets/Kigali-Genocide.webp";
 import nyandunguImage from "@/Assets/NYandungu.jpg";
+import { Link} from "react-router-dom";
 
 
 const Rwanda = () => {
+  const [showTripPlanner, setShowTripPlanner] = useState(false);
   const destinations = [
     {
       name: "Volcanoes National Park",
@@ -108,16 +113,22 @@ const Rwanda = () => {
             Encounter majestic mountain gorillas, explore vibrant culture, and discover a nation's remarkable renaissance.
           </p>
           <div className="mt-8 flex items-center justify-center gap-4">
-            <Button size="lg" className="bg-safari-gold text-black hover:bg-amber-500 font-semibold">
-              Plan Your Rwanda Safari
+            <Button 
+              size="lg" 
+              className="bg-safari-gold text-black hover:bg-safari-gold/80 font-semibold"
+              onClick={() => setShowTripPlanner(true)}
+            >
+              Plan Your Rwanda Trip
             </Button>
+            <Link to="/itineraries/rwanda">
             <Button size="lg" variant="outline" className="bg-transparent text-white border-white/30 hover:bg-white/10 hover:text-white font-semibold">
-              View Destinations
+              View Itineraries
             </Button>
+            </Link>
           </div>
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">4+</div>
+              <div className="text-4xl font-bold text-white">4</div>
               <div className="text-sm text-white">National Parks</div>
             </Card>
             <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
@@ -125,11 +136,11 @@ const Rwanda = () => {
               <div className="text-sm text-white">Mountain Gorillas</div>
             </Card>
             <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">8+</div>
+              <div className="text-4xl font-bold text-white">8</div>
               <div className="text-sm text-white">Museums & Cultural Sites</div>
             </Card>
             <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">100%</div>
+              <div className="text-4xl font-bold text-white">99%</div>
               <div className="text-sm text-white">Safe Travel</div>
             </Card>
           </div>
@@ -153,7 +164,7 @@ const Rwanda = () => {
               </p>
               <p className="text-gray-600 leading-relaxed mt-4">
                 Nestled in the heart of Africa, Rwanda is a gateway to exploring East Africa's natural wonders, offering a central location 
-                for extending travels to neighboring countries like Tanzania and Kenya. Its capital city, Kigali, renowned for its cleanliness 
+                for extending travels to neighboring countries like Uganda. Its capital city, Kigali, renowned for its cleanliness 
                 and safety, offers a blend of modern amenities and authentic African culture.
               </p>
             </div>
@@ -330,11 +341,19 @@ const Rwanda = () => {
                         )}
                       </div>
                     </div>
-
                     <div className="mt-6 flex justify-end gap-3">
-                      <Button className="bg-safari-gold text-black font-semibold hover:bg-safari-gold/90">
-                        Plan Your Visit
-                      </Button>
+                      <DialogClose asChild>
+                        <Button 
+                          className="bg-safari-gold text-black font-semibold hover:bg-safari-gold/90"
+                          onClick={() => {
+                            setTimeout(() => {
+                              setShowTripPlanner(true); // Open the trip planner dialog after the current dialog closes
+                            }, 100);
+                          }}
+                        >
+                          Plan Your Trip
+                        </Button>
+                      </DialogClose>
                     </div>
                   </div>
                 </DialogContent>
@@ -347,6 +366,10 @@ const Rwanda = () => {
   </div>
 </section>
    <Footer />
+      <TripPlannerDialog 
+        open={showTripPlanner}
+        onOpenChange={setShowTripPlanner}
+      />
     </div>
   );
 };

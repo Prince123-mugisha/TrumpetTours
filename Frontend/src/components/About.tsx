@@ -54,7 +54,7 @@ const About = () => {
                     </div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-safari-darker">3K+</div>
+                    <div className="text-2xl font-bold text-safari-darker">500</div>
                     <div className="text-sm text-gray-600">Happy Travelers</div>
                   </div>
                 </div>

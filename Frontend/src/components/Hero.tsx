@@ -92,18 +92,18 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-6 pt-12 max-w-2xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <div className="text-4xl md:text-5xl font-bold text-white">500+</div>
-              <div className="text-white/70 text-sm mt-2">Travelers</div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-8 sm:pt-12 max-w-2xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-white/20">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">500+</div>
+              <div className="text-white/70 text-xs sm:text-sm mt-2">Travelers</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <div className="text-4xl md:text-5xl font-bold text-white">50+</div>
-              <div className="text-white/70 text-sm mt-2">Tours</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-white/20">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">20+</div>
+              <div className="text-white/70 text-xs sm:text-sm mt-2">Tours</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <div className="text-4xl md:text-5xl font-bold text-white">15+</div>
-              <div className="text-white/70 text-sm mt-2">Years</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-white/20">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">10+</div>
+              <div className="text-white/70 text-xs sm:text-sm mt-2">Years</div>
             </div>
           </div>
         </div>

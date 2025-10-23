@@ -1431,22 +1431,6 @@ const RwandaItineraries = () => {
             Embark on expertly crafted safaris featuring gorilla encounters,
             wildlife adventures, and cultural experiences across Rwanda's stunning landscapes.
           </p>
-
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <Button
-              size="lg"
-              className="bg-safari-gold text-black hover:bg-amber-500 font-semibold"
-            >
-              Start Planning Your Trip
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-transparent text-white border-white/30 hover:bg-white/10 hover:text-white font-semibold"
-            >
-              View All Packages
-            </Button>
-          </div>
         </div>
       </section>
 
