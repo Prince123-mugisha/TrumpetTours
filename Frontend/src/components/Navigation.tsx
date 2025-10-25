@@ -205,14 +205,14 @@ const Navigation = () => {
                     {isMobileDestOpen && (
                       <div className="pl-4">
                         <Link
-                          to="/itineraries/rwanda"
+                          to="/destinations/rwanda"
                           className="block py-2 text-white/90 hover:text-yellow-400"
                           onClick={() => setIsOpen(false)}
                         >
                           Rwanda
                         </Link>
                         <Link
-                          to="/uganda"
+                          to="/destinations/uganda"
                           className="block py-2 text-white/90 hover:text-yellow-400"
                           onClick={() => setIsOpen(false)}
                         >

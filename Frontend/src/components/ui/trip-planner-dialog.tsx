@@ -81,8 +81,8 @@ const TripPlannerDialog = ({ open, onOpenChange }: TripPlannerDialogProps) => {
         </button>
 
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#D4AF37]/10 to-white px-4 sm:px-8 pt-8 sm:pt-10 pb-4 sm:pb-6 border-b">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#D4AF37]">
+        <div className="bg-gradient-to-r from-safari-gold/10 to-white px-4 sm:px-8 pt-8 sm:pt-10 pb-4 sm:pb-6 border-b">
+          <h2 className="text-2xl sm:text-3xl font-bold text-safari-gold">
             Plan Your Dream Safari Adventure
           </h2>
           <p className="text-gray-600 text-sm sm:text-base mt-2 sm:mt-3">
@@ -197,7 +197,7 @@ const TripPlannerDialog = ({ open, onOpenChange }: TripPlannerDialogProps) => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-[#D4AF37] text-[#1D1F16] hover:bg-[#D4AF37]/90 font-semibold py-3 sm:py-4 rounded-xl shadow-md transition-all text-sm sm:text-base"
+                  className="w-full bg-safari-gold text-[#1D1F16] hover:bg-safari-gold/90 font-semibold py-3 sm:py-4 rounded-xl shadow-md transition-all text-sm sm:text-base"
                 >
                   {isSubmitting ? "Sending..." : "Submit Trip Plan Request"}
                 </button>
