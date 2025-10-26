@@ -49,12 +49,12 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 z-10 text-center py-32 sm:py-32 mt-12 sm:mt-0">
         <div className="max-w-3xl mx-auto space-y-5 sm:space-y-6">
           {/* Badge */}
-          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-[#D4AF37]/30 rounded-full px-4 py-2 sm:px-5">
+          {/* <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-[#D4AF37]/30 rounded-full px-4 py-2 sm:px-5">
             <span className="w-2 h-2 bg-[#D4AF37] rounded-full animate-pulse" />
             <span className="text-[#D4AF37] text-xs sm:text-sm font-medium tracking-wider">
               EASTERN AFRICA EXPEDITIONS
             </span>
-          </div>
+          </div> */}
 
           {/* Experience Text */}
           <h2 className="text-base sm:text-xl md:text-2xl text-white/90 font-light tracking-widest">
@@ -74,7 +74,7 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-<div className="flex flex-col items-center justify-center gap-3 pt-4 max-w-md mx-auto w-full">
+{/* <div className="flex flex-col items-center justify-center gap-3 pt-4 max-w-md mx-auto w-full">
   <button
     className="w-full bg-safari-gold text-[#1D1F16] hover:bg-safari-gold/80 font-semibold px-6 py-3.5 sm:py-4 text-sm sm:text-base rounded-full transition-colors flex items-center justify-center gap-2"
     onClick={() => setShowTripPlanner(true)}
@@ -91,7 +91,7 @@ const Hero = () => {
       <ArrowRight className="h-5 w-5" />
     </button>
   </Link>
-</div>
+</div> */}
 
 
           {/* Stats */}
