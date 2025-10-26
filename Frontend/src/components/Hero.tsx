@@ -57,9 +57,9 @@ const Hero = () => {
           </div> */}
 
           {/* Experience Text */}
-          {/* <h2 className="text-base sm:text-xl md:text-2xl text-white/90 font-light tracking-widest">
-            Experience
-          </h2> */}
+          <h2 className="text-base sm:text-xl md:text-2xl text-white/90 font-light tracking-widest">
+            Welcome to 
+          </h2>
 
           {/* Main Heading */}
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
