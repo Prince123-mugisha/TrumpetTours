@@ -2,7 +2,6 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import HeroImage from "@/Assets/akagerarwanda.jpg";
 import RwandaItineraries from "@/Assets/nyungwe.jpg";
@@ -32,32 +31,36 @@ const Itineraries = () => {
               EXPLORE ITINERARIES
             </span>
           </div>
+
           <h1 className="mt-6 text-4xl md:text-6xl font-bold">
             <span className="block text-white">Your Journey,</span>
             <span className="block text-safari-gold">Perfectly Planned</span>
           </h1>
+
           <p className="mt-4 max-w-4xl mx-auto text-white/90 text-lg">
             Discover carefully crafted itineraries for Rwanda, Uganda, and across
             East Africa — blending wildlife, culture, and adventure into
             unforgettable travel experiences.
           </p>
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold">3</div>
-              <div className="text-sm">Itinerary Types</div>
-            </Card>
-            <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold">10+</div>
-              <div className="text-sm">Curated Trips</div>
-            </Card>
-            <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold">100%</div>
-              <div className="text-sm">Customizable</div>
-            </Card>
-            <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold">24/7</div>
-              <div className="text-sm">Support</div>
-            </Card>
+
+          {/* Fixed Stats Cards (Better Spacing & Alignment) */}
+          <div className="mt-16 md:mt-20 flex flex-col items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-4xl">
+              <Card className="bg-white/10 backdrop-blur-lg border-white/20 px-8 py-6 text-center text-white rounded-xl">
+                <div className="text-4xl font-bold">10+</div>
+                <div className="text-sm mt-1">Curated Trips</div>
+              </Card>
+
+              <Card className="bg-white/10 backdrop-blur-lg border-white/20 px-8 py-6 text-center text-white rounded-xl">
+                <div className="text-4xl font-bold">100%</div>
+                <div className="text-sm mt-1">Customizable</div>
+              </Card>
+
+              <Card className="bg-white/10 backdrop-blur-lg border-white/20 px-8 py-6 text-center text-white rounded-xl">
+                <div className="text-4xl font-bold">24/7</div>
+                <div className="text-sm mt-1">Support</div>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
@@ -84,13 +87,11 @@ const Itineraries = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="p-6 flex flex-col justify-between flex-grow bg-white">
                   <p className="text-gray-700 text-sm leading-relaxed mb-4">
                     Explore Rwanda’s stunning Volcanoes National Park, meet
                     mountain gorillas, and experience Kigali’s unique urban charm.
                   </p>
-
                   <div className="flex items-center text-safari-gold font-semibold hover:gap-3 gap-2 transition-all">
                     <span>Explore Rwanda Trips</span>
                     <ArrowRight className="w-4 h-4" />
@@ -114,13 +115,11 @@ const Itineraries = () => {
                     <p className="text-white/90 text-sm">The Pearl of Africa</p>
                   </div>
                 </div>
-
                 <div className="p-6 flex flex-col justify-between flex-grow bg-white">
                   <p className="text-gray-700 text-sm leading-relaxed mb-4">
                     Discover Uganda’s hidden gems — from gorilla trekking in Bwindi
                     to scenic boat safaris along the Nile River.
                   </p>
-
                   <div className="flex items-center text-safari-gold font-semibold hover:gap-3 gap-2 transition-all">
                     <span>Explore Uganda Trips</span>
                     <ArrowRight className="w-4 h-4" />
@@ -146,13 +145,11 @@ const Itineraries = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="p-6 flex flex-col justify-between flex-grow bg-white">
                   <p className="text-gray-700 text-sm leading-relaxed mb-4">
                     Choose from expertly curated safari packages that combine
                     Rwanda and Uganda for the ultimate East African experience.
                   </p>
-
                   <div className="flex items-center text-safari-gold font-semibold hover:gap-3 gap-2 transition-all">
                     <span>View All Packages</span>
                     <ArrowRight className="w-4 h-4" />

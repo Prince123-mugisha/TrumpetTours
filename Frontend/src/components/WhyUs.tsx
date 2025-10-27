@@ -59,7 +59,7 @@ const WhyUs = () => {
               <div className="w-12 h-12 rounded-full bg-safari-gold/10 flex items-center justify-center mb-4">
                 <Shield className="text-safari-gold" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">12/5 Support</h3>
+              <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>
               <p className="text-gray-600 text-sm">Round-the-clock assistance and support throughout your entire journey.</p>
               <div className="mt-4 inline-flex text-xs px-3 py-1 rounded-full bg-safari-gold/10 border border-safari-gold/30 text-safari-darker">Full Support</div>
             </Card>

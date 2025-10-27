@@ -106,7 +106,7 @@ const Footer = () => {
               <div className="mt-4 flex flex-col gap-3">
                 {/* Book a Call Button */}
                 <a
-                  href="https://calendar.app.google/wjBJKzKuMUrzeXVPA"
+                  href="https://calendar.app.google/5sk8bniciQQXXXRk9"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

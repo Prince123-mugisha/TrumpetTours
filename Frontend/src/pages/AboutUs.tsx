@@ -38,18 +38,9 @@ const AboutUs = () => {
             <span className="block text-safari-gold">Safari Adventures</span>
           </h1>
           <p className="mt-4 max-w-4xl mx-auto text-white/90 text-lg">
-            For over 15 years, we've been crafting extraordinary wildlife experiences across East Africa, connecting
-            travelers with the raw beauty and rich cultures of Rwanda, Uganda, Kenya, and Tanzania.
+            "Just as an elephant's trumpet sound expresses excitement, we aim to captivate and excite travelers 
+            with our unique wildlife adventures in Rwanda and Uganda, creating unforgettable experiences that touch your soul."
           </p>
-          <div className="mt-8 flex items-center justify-center">
-            <Button 
-              size="lg" 
-              className="bg-safari-gold text-black hover:bg-safari-gold/90 font-semibold"
-              onClick={() => setPlannerOpen(true)}
-            >
-              Plan Your Trip
-            </Button>
-          </div>
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-white">
             <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
               <div className="text-4xl font-bold text-white">10+</div>
@@ -81,14 +72,20 @@ const AboutUs = () => {
             </div>
             <h2 className="text-4xl md:text-5xl font-bold">Born from a Passion for East Africa</h2>
             <p className="text-gray-600">
-              Rwanda Trumpet Tours was founded with a simple yet profound mission: to share the breathtaking beauty and
-              incredible wildlife of East Africa with the world. Our name represents that magical moment when everything
-              aligns perfectly.
+              Based in the heart of Africa, Kigali, Rwanda, Trumpet Tours is your premier tour company specializing in 
+              meticulously crafted mountain gorilla trekking and wildlife safaris in Rwanda and beyond. As a fully 
+              registered and recognized tour company, our commitment to excellence shines through in every aspect of our service.
             </p>
             <p className="text-gray-600">
-              What started as a small operation run by passionate conservationists has grown into East Africa's premier
-              safari company. We craft authentic experiences, support sustainable tourism, and create genuine connections
-              with local communities.
+              From wildlife game drives to cultural immersions, our experienced team ensures your journey is not only safe 
+              and enjoyable but also deeply enriching. Our passion for showcasing the beauty and diversity of East Africa's 
+              landscapes and wildlife is evident in our carefully curated itineraries, which offer a blend of adventure, 
+              education, and relaxation.
+            </p>
+            <p className="text-gray-600">
+              Whether you're seeking the thrill of encountering mountain gorillas in their natural habitat, the serenity 
+              of a sunset game drive across the savannah, or the cultural richness of a village visit, we tailor each 
+              experience to exceed your expectations.
             </p>
           </div>
           <div>
@@ -101,38 +98,38 @@ const AboutUs = () => {
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <h3 className="text-3xl md:text-4xl font-bold">Our Mission & Values</h3>
+            <h3 className="text-3xl md:text-4xl font-bold">Why Choose Us</h3>
             <p className="mt-4 text-gray-600">
-              Everything we do is guided by our commitment to exceptional safari experiences while supporting
-              conservation efforts and local communities across East Africa.
+              At Trumpet Tours, we strive to provide exceptional experiences through our commitment to quality service,
+              sustainable practices, and personalized attention to every traveler's needs.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: "Conservation First",
-                desc: "We partner with local conservation organizations to protect wildlife and their habitats for future generations.",
+                title: "Non-stop availability",
+                desc: "We take great pride in our continuous accessibility, guaranteeing round-the-clock availability to fulfill your travel desires and organize exceptional journeys.",
               },
               {
-                title: "Community Support",
-                desc: "Every safari directly supports local communities through employment, partnerships, and sustainable tourism.",
+                title: "Wallet-friendly charges",
+                desc: "We offer a range of options from luxurious accommodations to budget-friendly alternatives, ensuring quality experiences that fit your budget.",
               },
               {
-                title: "Authentic Experiences",
-                desc: "We create genuine connections with local cultures and provide access to hidden gems off the beaten path.",
+                title: "Professional Guides",
+                desc: "Our experienced and knowledgeable guides offer unparalleled expertise, ensuring a rich and immersive experience for our travelers.",
               },
               {
-                title: "Sustainable Tourism",
-                desc: "Our eco–friendly approach ensures tourism benefits both wildlife and local communities.",
+                title: "Top-tier 4X4 safari vehicles",
+                desc: "We provide comfortable 4X4 safari vehicles equipped with fridges, WiFi, and charging ports, ensuring a luxurious and practical journey.",
               },
               {
-                title: "Expert Guidance",
-                desc: "Experienced guides share deep knowledge of wildlife behavior, local history, and culture.",
+                title: "Personalized Client Care",
+                desc: "Each tourist receives our undivided attention throughout their journey, with tailored experiences that exceed expectations.",
               },
               {
-                title: "Excellence",
-                desc: "We maintain the highest standards in safety, comfort, and service to exceed expectations.",
+                title: "Eco-friendly Travel",
+                desc: "We emphasize sustainable tourism practices, collaborating with local communities and conservation groups to benefit both environment and residents.",
               },
             ].map((item) => (
               <Card key={item.title} className="bg-white p-6 border border-gray-200">
@@ -157,19 +154,6 @@ const AboutUs = () => {
             Join thousands of travelers who discovered the magic of East Africa with us. Let's create
             memories that will last a lifetime.
           </p>
-          <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
-            <Button 
-              size="lg" 
-              className="bg-safari-gold text-black hover:bg-safari-gold/90 font-semibold"
-              onClick={() => setPlannerOpen(true)}
-            >
-              Plan Your Custom Trip
-            </Button>
-            <Link to="/Destination">
-              <Button size="lg" variant="outline" className="bg-transparent text-white border border-white/30 hover:bg-white">View All Tours</Button>
-            </Link>
-          </div>
-
           <div className="mt-12 border-t border-white/10" />
 
           <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">

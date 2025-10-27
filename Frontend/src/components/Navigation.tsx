@@ -156,7 +156,7 @@ const Navigation = () => {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <a 
-              href="https://calendar.app.google/wjBJKzKuMUrzeXVPA"
+              href="https://calendar.app.google/5sk8bniciQQXXXRk9"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -281,7 +281,7 @@ const Navigation = () => {
             })}
 
             <a 
-              href="https://calendar.app.google/wjBJKzKuMUrzeXVPA"
+              href="https://calendar.app.google/5sk8bniciQQXXXRk9"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full mt-4"

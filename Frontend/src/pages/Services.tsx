@@ -116,14 +116,14 @@ const Services = () => {
             to make your East African experience extraordinary.
           </p>
 
-          <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
+          {/* <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
             <Button size="lg" className="bg-safari-gold text-black hover:bg-safari-gold/90 font-semibold">
               Plan Your Trip 
             </Button>
             <Button size="lg" variant="outline" className="bg-transparent text-white border border-white/30 hover:bg-safari-gold">
               View Tours
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 

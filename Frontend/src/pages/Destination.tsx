@@ -53,7 +53,7 @@ const Destination = () => {
               <div className="text-sm text-white">Tour Options</div>
             </Card>
             <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">12/5</div>
+              <div className="text-4xl font-bold text-white">24/7</div>
               <div className="text-sm text-white">Support</div>
             </Card>
           </div>
