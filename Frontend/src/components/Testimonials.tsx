@@ -48,7 +48,7 @@ const stats = [
   { label: "Travelers", value: "500+", icon: Users },
   { label: "Rating", value: "4.9★", icon: Star },
   { label: "Reviews", value: "200+", icon: CheckCircle },
-  { label: "Years", value: "15+", icon: Calendar },
+  { label: "Years", value: "10", icon: Calendar },
 ];
 
 const Testimonials = () => {

@@ -69,8 +69,7 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-sm sm:text-base md:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed px-2">
-            Discover Eastern Africa's breathtaking landscapes and wildlife through
-            expertly curated safari adventures.
+           Discover the beauty of Africa’s wildlife adventure with us.
           </p>
 
           {/* CTA Buttons */}

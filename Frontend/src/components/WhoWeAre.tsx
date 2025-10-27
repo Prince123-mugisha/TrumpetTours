@@ -18,9 +18,7 @@ const WhoWeAre = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold text-safari-darker">
-              Experience the magic of Africa
-              <br />
-              with Us,
+              Experience the magic of Africa with us
             </h2>
 
             <div className="space-y-4 text-gray-600">

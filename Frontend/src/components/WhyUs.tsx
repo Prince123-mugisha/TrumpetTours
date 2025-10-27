@@ -18,7 +18,7 @@ const WhyUs = () => {
               <span className="text-safari-gold font-medium">WHY CHOOSE US</span>
             </div>
             <h2 className="mt-6 text-4xl md:text-5xl font-bold">
-              Your Trusted Safari Partner Since 2009
+              Your Trusted Safari Partner Since 2015
             </h2>
             <p className="mt-4 text-gray-600 text-lg">
               With over 10 years of expertise, we craft extraordinary East African adventures while supporting
@@ -32,49 +32,41 @@ const WhyUs = () => {
               <div className="w-12 h-12 rounded-full bg-safari-gold/10 flex items-center justify-center mb-4">
                 <Trophy className="text-safari-gold" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Award–Winning Excellence</h3>
-              <p className="text-gray-600 text-sm">Recognized across East Africa with multiple tourism awards and certifications.</p>
-              <div className="mt-4 inline-flex text-xs px-3 py-1 rounded-full bg-safari-gold/10 border border-safari-gold/30 text-safari-darker">5 Awards</div>
+              <h3 className="text-xl font-semibold mb-2">Safari Expertise</h3>
+              <p className="text-gray-600 text-sm">10 years of experience crafting exceptional safari adventures across East Africa.</p>
+              <div className="mt-4 inline-flex text-xs px-3 py-1 rounded-full bg-safari-gold/10 border border-safari-gold/30 text-safari-darker">10+ Years</div>
             </Card>
 
             <Card className="bg-white border border-gray-200 p-6 shadow-sm">
               <div className="w-12 h-12 rounded-full bg-safari-gold/10 flex items-center justify-center mb-4">
                 <Users className="text-safari-gold" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Expert Local Guides</h3>
-              <p className="text-gray-600 text-sm">Certified guides with deep knowledge of wildlife behavior, culture, and nature.</p>
-              <div className="mt-4 inline-flex text-xs px-3 py-1 rounded-full bg-safari-gold/10 border border-safari-gold/30 text-safari-darker">10+ Expert Guides</div>
+              <h3 className="text-xl font-semibold mb-2">Custom Itineraries</h3>
+              <p className="text-gray-600 text-sm">Personalized travel experiences tailored to your preferences and interests.</p>
+              <div className="mt-4 inline-flex text-xs px-3 py-1 rounded-full bg-safari-gold/10 border border-safari-gold/30 text-safari-darker">Custom Tours</div>
             </Card>
 
             <Card className="bg-white border border-gray-200 p-6 shadow-sm">
               <div className="w-12 h-12 rounded-full bg-safari-gold/10 flex items-center justify-center mb-4">
                 <Handshake className="text-safari-gold" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Local Partnerships</h3>
-              <p className="text-gray-600 text-sm">Strong relationships with conservancies, communities, and premium lodges.</p>
-              <div className="mt-4 inline-flex text-xs px-3 py-1 rounded-full bg-safari-gold/10 border border-safari-gold/30 text-safari-darker">15+ Partners</div>
+              <h3 className="text-xl font-semibold mb-2">Local Expertise</h3>
+              <p className="text-gray-600 text-sm">Expert local guides providing authentic experiences and cultural insights.</p>
+              <div className="mt-4 inline-flex text-xs px-3 py-1 rounded-full bg-safari-gold/10 border border-safari-gold/30 text-safari-darker">Expert Guides</div>
             </Card>
 
             <Card className="bg-white border border-gray-200 p-6 shadow-sm">
               <div className="w-12 h-12 rounded-full bg-safari-gold/10 flex items-center justify-center mb-4">
                 <Shield className="text-safari-gold" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Safety & Insurance</h3>
-              <p className="text-gray-600 text-sm">Comprehensive insurance, emergency protocols, and 24/7 support during your journey.</p>
-              <div className="mt-4 inline-flex text-xs px-3 py-1 rounded-full bg-safari-gold/10 border border-safari-gold/30 text-safari-darker">80% Coverage</div>
+              <h3 className="text-xl font-semibold mb-2">12/5 Support</h3>
+              <p className="text-gray-600 text-sm">Round-the-clock assistance and support throughout your entire journey.</p>
+              <div className="mt-4 inline-flex text-xs px-3 py-1 rounded-full bg-safari-gold/10 border border-safari-gold/30 text-safari-darker">Full Support</div>
             </Card>
           </div>
 
           {/* Contact CTA */}
           <div className="mt-16 flex items-center justify-center gap-4 flex-wrap">
-            <Button 
-              size="lg" 
-              className="bg-safari-gold text-safari-darker hover:bg-safari-gold/90 font-semibold"
-              onClick={() => setShowTripPlanner(true)}
-            >
-              Start Planning Your Trip 
-              <ChevronRight className="ml-2 h-5 w-5" />
-            </Button>
             <a href="https://wa.me/250793766308?text=Hello!%20I%20need%20help%20with%20my%20travel%20inquiry." target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp">
               <Button size="lg" className="bg-[#25D366] text-white hover:bg-[#1DA851] font-semibold">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="mr-2 h-5 w-5 fill-current" aria-hidden="true">
