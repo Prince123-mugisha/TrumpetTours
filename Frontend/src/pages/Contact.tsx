@@ -114,7 +114,7 @@ const Contact = () => {
                 <MdLocationOn className="w-5 h-5 sm:w-6 sm:h-6 text-safari-gold" />
               </div>
               <div className="text-sm sm:text-base font-semibold text-white">
-                Kigali, Rwanda
+                Kigali   norrsken  
               </div>
               <div className="text-xs sm:text-sm text-white/80 mt-1">Local Experts</div>
             </div>
@@ -199,7 +199,7 @@ const Contact = () => {
               <p className="text-sm sm:text-base mb-3">
                 <strong>Our Office:</strong>
                 <br />
-                Kigali, Rwanda
+                Kigali, Norrsken
                 <br />
                 East Africa Safari Hub
               </p>
@@ -232,41 +232,7 @@ const Contact = () => {
                 Chat with us on WhatsApp
               </a>
               <p className="text-xs sm:text-sm text-gray-500 mt-3">
-                Available Mon–Sun, 11:00 AM – 10:00 PM EAT
-              </p>
-            </div>
-
-            {/* Why Choose Section */}
-            <div className="bg-[#7b5c32] text-white rounded-2xl p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">
-                Why Choose Trumpet Tours?
-              </h3>
-              <ul className="space-y-3 text-sm sm:text-base">
-                <li className="flex items-start">
-                  <span className="text-yellow-300 mr-3 text-lg sm:text-xl">✔</span>
-                  <span>15+ years of safari expertise</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-yellow-300 mr-3 text-lg sm:text-xl">✔</span>
-                  <span>Custom itineraries tailored to you</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-yellow-300 mr-3 text-lg sm:text-xl">✔</span>
-                  <span>Local guides & authentic experiences</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-yellow-300 mr-3 text-lg sm:text-xl">✔</span>
-                  <span>24/7 support during your trip</span>
-                </li>
-              </ul>
-
-              <hr className="my-4 sm:my-6 border-yellow-700/50" />
-
-              <p className="text-center text-yellow-300 text-3xl sm:text-4xl font-bold">
-                5,000+
-                <span className="block text-sm sm:text-base text-white font-normal mt-2">
-                  Happy Travelers
-                </span>
+                Available Mon–Sun, 11:00 AM – 5:00 PM CAT
               </p>
             </div>
           </div>

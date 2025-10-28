@@ -155,25 +155,6 @@ const Destination = () => {
             memories that will last a lifetime.
           </p>
           <div className="mt-12 border-t border-white/10" />
-
-          <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div>
-              <div className="text-4xl font-bold">10+</div>
-              <div className="mt-2 text-sm text-white/70">Years Experience</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold">500+</div>
-              <div className="mt-2 text-sm text-white/70">Happy Travelers</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold">50+</div>
-              <div className="mt-2 text-sm text-white/70">Safari Tours</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold">95%</div>
-              <div className="mt-2 text-sm text-white/70">Success Rate</div>
-            </div>
-          </div>
         </div>
       </section>
 
