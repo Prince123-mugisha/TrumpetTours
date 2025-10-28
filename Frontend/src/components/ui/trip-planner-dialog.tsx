@@ -24,12 +24,25 @@ const TripPlannerDialog = ({ open, onOpenChange }: TripPlannerDialogProps) => {
   }
 
   const attractions = [
-    { id: "akagera", label: "Akagera National Park (wildlife safaris & more)" },
+    // Rwanda Attractions
+    { id: "akagera", label: "Akagera National Park, Rwanda (wildlife safaris & more)" },
     { id: "kigali", label: "Kigali City Tour (Genocide Memorial & more)" },
     { id: "volcanoes", label: "Volcanoes National Park (Gorilla Trekking & more)" },
     { id: "kivu", label: "Lake Kivu (Relaxation & more)" },
     { id: "nyungwe", label: "Nyungwe National Park (Primate Treks, Waterfalls & more)" },
-    { id: "all", label: "All Touristic Attractions in Rwanda" },
+    { id: "all-rwanda", label: "All Touristic Attractions in Rwanda" },
+    
+    // Uganda Attractions
+    { id: "bwindi", label: "Bwindi Impenetrable Forest (Gorilla Trekking & nature walks)" },
+    { id: "queen-elizabeth", label: "Queen Elizabeth National Park (Tree-climbing lions & game drives)" },
+    { id: "kibale", label: "Kibale National Park (Chimpanzee tracking & forest walks)" },
+    { id: "kidepo", label: "Kidepo Valley National Park (Remote wilderness & game drives)" },
+    { id: "mgahinga", label: "Mgahinga Gorilla National Park (Gorillas & golden monkeys)" },
+    { id: "murchison", label: "Murchison Falls National Park (Wildlife & Nile cruises)" },
+    { id: "mburo", label: "Lake Mburo National Park (Zebras & horseback safaris)" },
+    { id: "elgon", label: "Mount Elgon National Park (Hiking & cave exploration)" },
+    { id: "semuliki", label: "Semuliki National Park (Hot springs & rainforest)" },
+    { id: "all-uganda", label: "All Touristic Attractions in Uganda" }
   ]
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -169,14 +182,48 @@ const TripPlannerDialog = ({ open, onOpenChange }: TripPlannerDialogProps) => {
                     <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">
                       Destinations & Preferences
                     </h3>
-                    <label className="block text-sm font-medium mb-3">Select Your Desired Destinations</label>
-                    <div className="grid grid-cols-1 gap-2">
-                      {attractions.map((a) => (
-                        <div key={a.id} className="flex items-center space-x-2">
-                          <input type="checkbox" id={a.id} name={`attraction-${a.id}`} className="w-4 h-4" />
-                          <label htmlFor={a.id} className="text-sm">{a.label}</label>
+                    <div className="space-y-6">
+                      {/* Rwanda Destinations */}
+                      <div>
+                        <h4 className="text-safari-gold font-semibold mb-3 flex items-center gap-2">
+                          <span className="w-2 h-2 rounded-full bg-safari-gold"/>
+                          Rwanda Destinations
+                        </h4>
+                        <div className="grid grid-cols-1 gap-2">
+                          {attractions
+                            .filter(a => a.id.includes('akagera') || a.id.includes('kigali') || 
+                                       a.id.includes('volcanoes') || a.id.includes('kivu') || 
+                                       a.id.includes('nyungwe') || a.id === 'all-rwanda')
+                            .map((a) => (
+                              <div key={a.id} className="flex items-center space-x-2">
+                                <input type="checkbox" id={a.id} name={`attraction-${a.id}`} className="w-4 h-4" />
+                                <label htmlFor={a.id} className="text-sm">{a.label}</label>
+                              </div>
+                            ))}
                         </div>
-                      ))}
+                      </div>
+
+                      {/* Uganda Destinations */}
+                      <div>
+                        <h4 className="text-safari-gold font-semibold mb-3 flex items-center gap-2">
+                          <span className="w-2 h-2 rounded-full bg-safari-gold"/>
+                          Uganda Destinations
+                        </h4>
+                        <div className="grid grid-cols-1 gap-2">
+                          {attractions
+                            .filter(a => a.id.includes('bwindi') || a.id.includes('queen') || 
+                                       a.id.includes('kibale') || a.id.includes('kidepo') || 
+                                       a.id.includes('mgahinga') || a.id.includes('murchison') ||
+                                       a.id.includes('mburo') || a.id.includes('elgon') ||
+                                       a.id.includes('semuliki') || a.id === 'all-uganda')
+                            .map((a) => (
+                              <div key={a.id} className="flex items-center space-x-2">
+                                <input type="checkbox" id={a.id} name={`attraction-${a.id}`} className="w-4 h-4" />
+                                <label htmlFor={a.id} className="text-sm">{a.label}</label>
+                              </div>
+                            ))}
+                        </div>
+                      </div>
                     </div>
                   </section>
 

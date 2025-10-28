@@ -1,7 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Heart } from "lucide-react";
 import { useState } from "react";
 import { ItineraryDialog } from "@/components/ui/itinerary-dialog";
 import heroImage from "@/Assets/uganda-safaris.jpg";
@@ -454,70 +453,30 @@ const UgandaItineraries = () => {
 
           {/* Description */}
           <p className="mt-4 max-w-3xl mx-auto text-white/90 text-lg">
-            Embark on extraordinary journeys through Uganda's diverse landscapes,
-            from tracking mountain gorillas in Bwindi to witnessing the mighty
-            Murchison Falls and encountering tree-climbing lions in Queen Elizabeth
-            National Park.
+            Discover Uganda's diverse landscapes and wildlife through our carefully crafted itineraries. 
+            Each journey promises unique experiences and unforgettable encounters with nature.
           </p>
-
-          {/* Buttons */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <Button
-              size="lg"
-              className="bg-safari-gold text-black hover:bg-safari-gold font-semibold"
-            >
-              Plan Your Uganda Adventure
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-transparent text-white border-white/30 hover:bg-white/10 hover:text-white font-semibold"
-            >
-              View Safari Packages
-            </Button>
-          </div>
-
-          {/* Highlights */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-safari-gold font-semibold text-lg mb-2">
-                Gorilla Trekking
-              </h3>
-              <p className="text-white/80 text-sm">
-                Experience close encounters with mountain gorillas in Bwindi
-                Impenetrable Forest.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-safari-gold font-semibold text-lg mb-2">
-                Wildlife Safaris
-              </h3>
-              <p className="text-white/80 text-sm">
-                Discover diverse wildlife in Queen Elizabeth and Murchison Falls
-                National Parks.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-safari-gold font-semibold text-lg mb-2">
-                Cultural Experiences
-              </h3>
-              <p className="text-white/80 text-sm">
-                Immerse yourself in Uganda's rich cultural heritage and traditional
-                communities.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Itinerary Cards Section */}
-      <section className="py-20 bg-gray-50">
+      <section id="featured-itineraries" className="py-20 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
-            Featured Uganda Itineraries
-          </h2>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-amber-400/10 border border-amber-400/30">
+              <span className="w-2 h-2 rounded-full bg-amber-400" />
+              <span className="text-amber-600 font-medium">
+                EXPLORE OUR ITINERARIES
+              </span>
+            </div>
+            <h2 className="mt-6 text-3xl md:text-4xl font-bold text-gray-800">
+              Featured Uganda Itineraries
+            </h2>
+            <p className="mt-4 text-gray-600">
+              Discover the beauty of Uganda through our carefully curated itineraries,
+              each designed to provide authentic and memorable experiences.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {itineraries.map((itinerary) => (
@@ -535,26 +494,15 @@ const UgandaItineraries = () => {
                 {/* Dark Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
 
-                {/* Heart Icon */}
-                <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full hover:bg-white/40 transition">
-                  <Heart className="w-5 h-5 text-white" />
-                </div>
-
                 {/* Text Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-lg font-semibold mb-1">
+                  <h3 className="text-lg font-semibold mb-3">
                     {itinerary.title}
                   </h3>
-                  <p className="text-sm text-gray-200">{itinerary.category}</p>
-                  <p className="text-sm mt-2">
-                    from <span className="font-semibold">{itinerary.price}</span> •{" "}
-                    {itinerary.location}
-                  </p>
-
                   {/* Button */}
                   <Button 
                     onClick={() => handleOpenItinerary(itinerary)}
-                    className="mt-4 w-full border border-white/40 text-white font-semibold 
+                    className="mt-3 w-full border border-white/40 text-white font-semibold 
                     bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:border-white/60 
                     transition-all duration-300"
                   >

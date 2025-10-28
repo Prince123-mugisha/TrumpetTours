@@ -1471,41 +1471,15 @@ const RwandaItineraries = () => {
 
                 {/* Card Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-2xl font-semibold mb-1">{itinerary.title}</h3>
-                  <p className="text-sm text-gray-200">Economy • Safari</p>
-
-                  <div className="flex items-center gap-2 mt-2 text-sm text-gray-300">
-                    <span>from <strong>$1200</strong></span>
-                    <span>•</span>
-                    <span>Rwanda</span>
-                  </div>
-
+                  <h3 className="text-2xl font-semibold mb-3">{itinerary.title}</h3>
                   {/* Transparent Button */}
                   <button
-                    className="mt-5 w-full border border-white/40 text-white font-semibold py-2 rounded-full 
+                    className="mt-3 w-full border border-white/40 text-white font-semibold py-2 rounded-full 
                     bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:border-white/60 
                     transition-all duration-300"
                   >
                     View Details
                   </button>
-                </div>
-
-                {/* Heart Icon */}
-                <div className="absolute top-4 right-4 bg-white/20 p-2 rounded-full backdrop-blur-sm">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="white"
-                    className="w-5 h-5"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M21 8.25c0-2.485-2.098-4.5-4.688-4.5-1.69 0-3.174.972-3.937 2.406A4.687 4.687 0 008.438 3.75C5.848 3.75 3.75 5.765 3.75 8.25c0 7.22 8.625 11.625 8.625 11.625S21 15.47 21 8.25z"
-                    />
-                  </svg>
                 </div>
               </div>
             ))}
