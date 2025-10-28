@@ -61,7 +61,7 @@ const AboutUs = () => {
                 key={index}
                 className="w-40 md:w-48 bg-white/10 backdrop-blur-md border border-white/20 p-6 text-center shadow-lg"
               >
-                <div className="text-4xl font-bold text-safari-gold">
+                <div className="text-4xl font-bold text-white">
                   {stat.value}
                 </div>
                 <div className="mt-2 text-sm text-white/80">{stat.label}</div>
