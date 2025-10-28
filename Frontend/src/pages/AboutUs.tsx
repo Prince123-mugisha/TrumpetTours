@@ -13,6 +13,7 @@ import vissionImage from "@/Assets/vission.jpeg";
 
 const AboutUs = () => {
   const [plannerOpen, setPlannerOpen] = useState(false);
+  const [showFullStory, setShowFullStory] = useState(false);
 
   return (
     <div className="min-h-screen bg-white text-safari-darker">
@@ -82,40 +83,64 @@ const AboutUs = () => {
             <h2 className="text-4xl md:text-5xl font-bold">
               Born from a Passion for East Africa
             </h2>
-            <p className="text-gray-600">
-              Welcome to Trumpet Tours, your premier tour company based in the
-              heart of Africa, Kigali, Rwanda. With a dedication to providing
-              unforgettable experiences, we specialize in meticulously crafted
-              mountain gorilla trekking and wildlife safaris in Rwanda and
-              beyond. As a fully registered and recognized tour company, our
-              commitment to excellence shines through in every aspect of our
-              service.
-            </p>
-            <p className="text-gray-600">
-              From wildlife game drives to cultural immersions, our experienced
-              team ensures your journey is not only safe and enjoyable but also
-              deeply enriching. Our passion for showcasing the beauty and diversity 
-              of East Africa's landscapes and wildlife is evident in our carefully 
-              curated itineraries, which offer a blend of adventure, education, 
-              and relaxation.
-            </p>
-            <p className="text-gray-600">
-              Whether you're seeking the thrill of encountering mountain gorillas 
-              in their natural habitat, the serenity of a sunset game drive across 
-              the savannah, or the cultural richness of a village visit, we tailor
-              each experience to exceed your expectations. With a fleet of
-              well-maintained safari vehicles and knowledgeable guides, we
-              invite you to explore Rwanda, Uganda, and beyond with us,
-              unlocking the wonders of Africa's premier safari destinations.
-            </p>
-            <p className="text-gray-600">
-              Our commitment to sustainable tourism practices ensures that your
-              travels not only benefit you but also contribute to the
-              conservation of the natural environment and support local
-              communities. Join us on an exceptional journey through the
-              breathtaking landscapes and iconic wildlife of East Africa, where
-              every moment is crafted to leave a lasting imprint on your soul.
-            </p>
+            {/* Story text with collapse/expand */}
+            {!showFullStory ? (
+              <>
+                <p className="text-gray-600">
+                  Welcome to Trumpet Tours, your premier tour company based in the
+                  heart of Africa, Kigali, Rwanda. With a dedication to providing
+                  unforgettable experiences, we specialize in mountain gorilla trekking
+                  and wildlife safaris in Rwanda and beyond.
+                </p>
+                <p className="text-gray-600">
+                  From wildlife game drives to cultural immersions, our experienced
+                  team ensures your journey is safe, enjoyable and deeply enriching.
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="text-gray-600">
+                  Welcome to Trumpet Tours, your premier tour company based in the
+                  heart of Africa, Kigali, Rwanda. With a dedication to providing
+                  unforgettable experiences, we specialize in meticulously crafted
+                  mountain gorilla trekking and wildlife safaris in Rwanda and
+                  beyond. As a fully registered and recognized tour company, our
+                  commitment to excellence shines through in every aspect of our
+                  service.
+                </p>
+                <p className="text-gray-600">
+                  From wildlife game drives to cultural immersions, our experienced
+                  team ensures your journey is not only safe and enjoyable but also
+                  deeply enriching. Our passion for showcasing the beauty and diversity 
+                  of East Africa's landscapes and wildlife is evident in our carefully 
+                  curated itineraries, which offer a blend of adventure, education, 
+                  and relaxation.
+                </p>
+                <p className="text-gray-600">
+                  Whether you're seeking the thrill of encountering mountain gorillas 
+                  in their natural habitat, the serenity of a sunset game drive across 
+                  the savannah, or the cultural richness of a village visit, we tailor
+                  each experience to exceed your expectations. With a fleet of
+                  well-maintained safari vehicles and knowledgeable guides, we
+                  invite you to explore Rwanda, Uganda, and beyond with us,
+                  unlocking the wonders of Africa's premier safari destinations.
+                </p>
+                <p className="text-gray-600">
+                  Our commitment to sustainable tourism practices ensures that your
+                  travels not only benefit you but also contribute to the
+                  conservation of the natural environment and support local
+                  communities. Join us on an exceptional journey through the
+                  breathtaking landscapes and iconic wildlife of East Africa, where
+                  every moment is crafted to leave a lasting imprint on your soul.
+                </p>
+              </>
+            )}
+
+            <div className="mt-4">
+              <Button size="sm" variant="ghost" onClick={() => setShowFullStory(!showFullStory)} className="text-safari-gold font-semibold">
+                {showFullStory ? "Show less" : "Show more"}
+              </Button>
+            </div>
           </div>
 
           <div>
@@ -245,26 +270,7 @@ const AboutUs = () => {
           <p className="mt-4 text-white/80 max-w-3xl mx-auto">
             Join thousands of travelers who discovered the magic of East Africa
             with us. Let's create memories that will last a lifetime.
-          </p>
-
-          {/* CTA Stats Cards */}
-          <div className="mt-14 flex flex-wrap justify-center gap-6">
-            {[
-              { value: "15+", label: "Years Experience" },
-              { value: "500+", label: "Happy Travelers" },
-              { value: "50+", label: "Safari Tours" },
-            ].map((stat, index) => (
-              <Card
-                key={index}
-                className="w-40 md:w-48 bg-white/10 backdrop-blur-md border border-white/20 p-6 text-center shadow-md"
-              >
-                <div className="text-4xl font-bold text-safari-gold">
-                  {stat.value}
-                </div>
-                <div className="mt-2 text-sm text-white/80">{stat.label}</div>
-              </Card>
-            ))}
-          </div>
+          </p> 
         </div>
       </section>
 

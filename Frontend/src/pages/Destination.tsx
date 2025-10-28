@@ -154,19 +154,6 @@ const Destination = () => {
             Join thousands of travelers who discovered the magic of East Africa with us. Let's create
             memories that will last a lifetime.
           </p>
-          <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
-            <Button 
-              size="lg" 
-              className="bg-safari-gold text-black hover:bg-safari-gold/90 font-semibold"
-              onClick={() => setShowTripPlanner(true)}
-            >
-              Plan Your Custom Trip
-            </Button>
-            <Link to="/itineraries">
-              <Button size="lg" variant="outline" className="bg-transparent text-white border border-white/30 hover:bg-white">View All Itineraries</Button>
-            </Link>
-          </div>
-
           <div className="mt-12 border-t border-white/10" />
 
           <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
