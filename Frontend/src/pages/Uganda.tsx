@@ -89,63 +89,60 @@ const Uganda = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="pt-28 md:pt-32 relative overflow-hidden min-h-[120vh] flex items-center">
-        <div className="absolute inset-0">
-          <img
-            src={heroImage}
-            alt="Uganda Landscape"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/60" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10 text-center text-white mt-[-20vh]">
-          <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/10 border border-white/20">
-            <span className="w-2 h-2 rounded-full bg-safari-gold" />
-            <span className="text-safari-gold font-medium">DISCOVER UGANDA</span>
-          </div>
-          <h1 className="mt-6 text-4xl md:text-6xl font-bold">
-            <span className="block text-white">Experience the Pearl of</span>
-            <span className="block text-safari-gold">Africa's Beauty</span>
-          </h1>
-          <p className="mt-4 max-w-4xl mx-auto text-white/90 text-lg">
-            Journey through Uganda's diverse landscapes, from misty mountains to sprawling savannas.
-            Encounter incredible wildlife, track gorillas and chimps, and discover the warmth of the Pearl of Africa.
-          </p>
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <Button 
-              size="lg" 
-              className="bg-safari-gold text-black hover:bg-safari-gold/90 font-semibold"
-              onClick={() => setShowTripPlanner(true)}
-            >
-              Plan Your Uganda Trip 
-            </Button>
-            <Link to="/itineraries/uganda">
-              <Button size="lg" variant="outline" className="bg-transparent text-white border-white/30 hover:bg-white/10 hover:text-white font-semibold">
-                View Itineraries
-              </Button>
-            </Link>
-          </div>
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">10+</div>
-              <div className="text-sm text-white">National Parks</div>
-            </Card>
-            <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">1200+</div>
-              <div className="text-sm text-white">Bird Species</div>
-            </Card>
-            <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">10+</div>
-              <div className="text-sm text-white">Museums</div>
-            </Card>
-            <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">90%</div>
-              <div className="text-sm text-white">Safe Travel</div>
-            </Card>
-          </div>
-        </div>
-      </section>
+    {/* Hero Section */}
+<section className="pt-28 md:pt-32 relative overflow-hidden min-h-[100vh] flex items-center">
+  {/* Background Image */}
+  <div className="absolute inset-0">
+    <img
+      src={heroImage}
+      alt="Uganda Landscape"
+      className="w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-black/60" />
+  </div>
+
+  {/* Hero Content */}
+  <div className="container mx-auto px-4 relative z-10 text-center text-white">
+    {/* Tagline */}
+    <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/10 border border-white/20">
+      <span className="w-2 h-2 rounded-full bg-safari-gold" />
+      <span className="text-safari-gold font-medium">DISCOVER UGANDA</span>
+    </div>
+
+    {/* Title */}
+    <h1 className="mt-6 text-4xl md:text-6xl font-bold leading-tight">
+      <span className="block text-white">Experience the Pearl of</span>
+      <span className="block text-safari-gold">Africa's Beauty</span>
+    </h1>
+
+    {/* Description */}
+    <p className="mt-4 max-w-3xl mx-auto text-white/90 text-lg">
+      Journey through Uganda’s breathtaking wilderness — from gorilla-inhabited forests 
+      to the thunderous Murchison Falls. Discover a land teeming with wildlife, adventure, 
+      and the warmth of its people.
+    </p>
+
+    {/* Statistics Cards */}
+    <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      {[
+        { value: "10+", label: "National Parks" },
+        { value: "1,200+", label: "Bird Species" },
+        { value: "5+", label: "UNESCO Heritage Sites" },
+      ].map((item, i) => (
+        <Card
+          key={i}
+          className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white transition-transform duration-300 hover:scale-105"
+        >
+          <div className="text-4xl font-bold text-white">{item.value}</div>
+          <div className="text-sm text-white/90 mt-2">{item.label}</div>
+        </Card>
+      ))}
+    </div>
+
+    
+  </div>
+</section>
+
 
       {/* Overview Section */}
       <section className="py-20 bg-white">

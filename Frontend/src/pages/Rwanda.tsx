@@ -90,62 +90,54 @@ const Rwanda = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       {/* Hero Section */}
-      <section className="pt-28 md:pt-32 relative overflow-hidden min-h-[120vh] flex items-center">
-        <div className="absolute inset-0">
-          <img
-            src={heroImage}
-            alt="Rwanda Landscape"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/60" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10 text-center text-white mt-[-20vh]">
-          <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/10 border border-white/20">
-            <span className="w-2 h-2 rounded-full bg-safari-gold" />
-            <span className="text-safari-gold font-medium">DISCOVER RWANDA</span>
-          </div>
-          <h1 className="mt-6 text-4xl md:text-6xl font-bold">
-            <span className="block text-white">Experience the Land of</span>
-            <span className="block text-safari-gold">A Thousand Hills</span>
-          </h1>
-          <p className="mt-4 max-w-4xl mx-auto text-white/90 text-lg">
-            Journey through Rwanda's breathtaking landscapes, from misty mountains to pristine lakes.
-            Encounter majestic mountain gorillas, explore vibrant culture, and discover a nation's remarkable renaissance.
-          </p>
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <Button 
-              size="lg" 
-              className="bg-safari-gold text-black hover:bg-safari-gold/80 font-semibold"
-              onClick={() => setShowTripPlanner(true)}
-            >
-              Plan Your Rwanda Trip
-            </Button>
-            <Link to="/itineraries/rwanda">
-            <Button size="lg" variant="outline" className="bg-transparent text-white border-white/30 hover:bg-white/10 hover:text-white font-semibold">
-              View Itineraries
-            </Button>
-            </Link>
-          </div>
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">4</div>
-              <div className="text-sm text-white">National Parks</div>
-            </Card>
-            <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">1000+</div>
-              <div className="text-sm text-white">Mountain Gorillas</div>
-            </Card>
-            <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">8</div>
-              <div className="text-sm text-white">Museums & Cultural Sites</div>
-            </Card>
-            <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">99%</div>
-              <div className="text-sm text-white">Safe Travel</div>
-            </Card>
-          </div>
-        </div>
-      </section>
+<section className="pt-28 md:pt-32 relative overflow-hidden min-h-[100vh] flex items-center">
+  <div className="absolute inset-0">
+    <img
+      src={heroImage}
+      alt="Rwanda Landscape"
+      className="w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-black/60" />
+  </div>
+
+  <div className="container mx-auto px-4 relative z-10 text-center text-white">
+    {/* Tagline */}
+    <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/10 border border-white/20">
+      <span className="w-2 h-2 rounded-full bg-safari-gold" />
+      <span className="text-safari-gold font-medium">DISCOVER RWANDA</span>
+    </div>
+
+    {/* Title */}
+    <h1 className="mt-6 text-4xl md:text-6xl font-bold leading-tight">
+      <span className="block text-white">Experience the Land of</span>
+      <span className="block text-safari-gold">A Thousand Hills</span>
+    </h1>
+
+    {/* Description */}
+    <p className="mt-4 max-w-3xl mx-auto text-white/90 text-lg">
+      Journey through Rwanda's breathtaking landscapes, from misty mountains to pristine lakes.
+      Encounter majestic mountain gorillas, explore vibrant culture, and discover a nation's remarkable renaissance.
+    </p>
+
+    {/* Statistics Cards */}
+    <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      {[
+        { value: "4", label: "National Parks" },
+        { value: "1000+", label: "Mountain Gorillas" },
+        { value: "8", label: "Museums & Cultural Sites" },
+      ].map((item, i) => (
+        <Card
+          key={i}
+          className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white transition-transform duration-300 hover:scale-105"
+        >
+          <div className="text-4xl font-bold text-white">{item.value}</div>
+          <div className="text-sm text-white/90 mt-2">{item.label}</div>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Overview Section */}
       <section className="py-20 bg-white">

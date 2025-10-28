@@ -83,19 +83,38 @@ const AboutUs = () => {
               Born from a Passion for East Africa
             </h2>
             <p className="text-gray-600">
-              Based in the heart of Africa, Kigali, Rwanda, Trumpet Tours is your
-              premier tour company specializing in meticulously crafted mountain
-              gorilla trekking and wildlife safaris in Rwanda and beyond.
+              Welcome to Trumpet Tours, your premier tour company based in the
+              heart of Africa, Kigali, Rwanda. With a dedication to providing
+              unforgettable experiences, we specialize in meticulously crafted
+              mountain gorilla trekking and wildlife safaris in Rwanda and
+              beyond. As a fully registered and recognized tour company, our
+              commitment to excellence shines through in every aspect of our
+              service.
             </p>
             <p className="text-gray-600">
               From wildlife game drives to cultural immersions, our experienced
               team ensures your journey is not only safe and enjoyable but also
-              deeply enriching.
+              deeply enriching. Our passion for showcasing the beauty and diversity 
+              of East Africa's landscapes and wildlife is evident in our carefully 
+              curated itineraries, which offer a blend of adventure, education, 
+              and relaxation.
             </p>
             <p className="text-gray-600">
-              Whether you're seeking the thrill of encountering mountain
-              gorillas in their natural habitat or the serenity of a sunset game
-              drive, we tailor each experience to exceed your expectations.
+              Whether you're seeking the thrill of encountering mountain gorillas 
+              in their natural habitat, the serenity of a sunset game drive across 
+              the savannah, or the cultural richness of a village visit, we tailor
+              each experience to exceed your expectations. With a fleet of
+              well-maintained safari vehicles and knowledgeable guides, we
+              invite you to explore Rwanda, Uganda, and beyond with us,
+              unlocking the wonders of Africa's premier safari destinations.
+            </p>
+            <p className="text-gray-600">
+              Our commitment to sustainable tourism practices ensures that your
+              travels not only benefit you but also contribute to the
+              conservation of the natural environment and support local
+              communities. Join us on an exceptional journey through the
+              breathtaking landscapes and iconic wildlife of East Africa, where
+              every moment is crafted to leave a lasting imprint on your soul.
             </p>
           </div>
 

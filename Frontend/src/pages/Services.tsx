@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import {Link} from "react-router-dom"
 import {
   Dialog,
   DialogContent,
@@ -385,11 +386,6 @@ const Services = () => {
                                 )}
                               </ul>
                             </div>
-                            <div className="mt-6 flex justify-end">
-                              <Button className="bg-safari-gold text-black font-semibold hover:bg-safari-gold/90">
-                                Plan Your Trip
-                              </Button>
-                            </div>
                           </div>
                         </DialogContent>
                       </Dialog>
@@ -463,9 +459,11 @@ const Services = () => {
             Join thousands of travelers who discovered the magic of East Africa with us. Let's create
             memories that will last a lifetime.
           </p>
+          
           <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
-            <Button size="lg" className="bg-safari-gold text-black hover:bg-safari-gold/90 font-semibold">Plan Your Custom Safari</Button>
-            <Button size="lg" variant="outline" className="bg-transparent text-white border border-white/30 hover:bg-white/10 hover:text-white">View All Tours</Button>
+            <Link to="/itineraries">
+              <Button size="lg" variant="outline" className="bg-transparent text-white border border-white/30 hover:bg-white/10 hover:text-white">View All Tours</Button>
+            </Link>
           </div>
 
           <div className="mt-12 border-t border-white/10" />
