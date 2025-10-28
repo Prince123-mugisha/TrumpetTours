@@ -244,7 +244,7 @@ const Contact = () => {
               <ul className="space-y-3 text-sm sm:text-base">
                 <li className="flex items-start">
                   <span className="text-yellow-300 mr-3 text-lg sm:text-xl">✔</span>
-                  <span>10 years of safari expertise</span>
+                  <span>15+ years of safari expertise</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-yellow-300 mr-3 text-lg sm:text-xl">✔</span>

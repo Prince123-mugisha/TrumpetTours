@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Calendar, Plane } from "lucide-react";
 import trumpetLogo from "@/Assets/logo192.png";
@@ -7,7 +7,7 @@ import { TripPlannerDialog } from "@/components/ui/trip-planner-dialog";
 
 export const navLinks = [
   { name: "Home", href: "/" },
-  { name: "About Us", href: "/About Us" },
+  { name: "About Us", href: "/About-Us" },
   { name: "Services", href: "/services" },
   { name: "Destination", href: "/Destination" },
   { name: "Itineraries", href: "/Itineraries" },
@@ -15,6 +15,7 @@ export const navLinks = [
 ];
 
 const Navigation = () => {
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [destOpen, setDestOpen] = useState(false);
   const [itinerariesOpen, setItinerariesOpen] = useState(false);
@@ -22,6 +23,19 @@ const Navigation = () => {
   const [isMobileItinerariesOpen, setIsMobileItinerariesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showTripPlanner, setShowTripPlanner] = useState(false);
+
+  const isActive = (path: string) => {
+    if (path === "/") {
+      return location.pathname === "/";
+    }
+    // Handle About Us page specifically
+    if (path === "/about-us") {
+      return location.pathname.toLowerCase() === "/about-us" || 
+             location.pathname.toLowerCase() === "/aboutus" ||
+             location.pathname.toLowerCase() === "/about";
+    }
+    return location.pathname.toLowerCase().startsWith(path.toLowerCase());
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,10 +78,14 @@ const Navigation = () => {
                   >
                     <Link
                       to={link.href}
-                      className="text-white hover:text-safari-gold  transition-colors text-sm font-medium flex items-center space-x-2"
+                      className={`transition-colors text-sm font-medium flex items-center space-x-2 relative ${
+                        isActive(link.href) || isActive('/destinations')
+                          ? "text-safari-gold after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-[2px] after:bg-safari-gold"
+                          : "text-white hover:text-safari-gold"
+                      }`}
                     >
                       <span>{link.name}</span>
-                      <span className="text-white/80">▾</span>
+                      <span className={isActive(link.href) || isActive('/destinations') ? "text-safari-gold" : "text-white/80"}>▾</span>
                     </Link>
 
                     {destOpen && (
@@ -75,14 +93,22 @@ const Navigation = () => {
                         <div className="bg-white rounded-md shadow-lg">
                           <Link
                             to="/destinations/rwanda"
-                            className="block px-4 py-2 text-gray-800 hover:bg-safari-gold  rounded-t-md"
+                            className={`block px-4 py-2 transition-colors rounded-t-md ${
+                              isActive('/destinations/rwanda')
+                                ? "bg-safari-gold/10 text-safari-gold"
+                                : "text-gray-800 hover:bg-safari-gold"
+                            }`}
                             onClick={() => setDestOpen(false)}
                           >
                             Rwanda
                           </Link>
                           <Link
                             to="/destinations/uganda"
-                            className="block px-4 py-2 text-gray-800 hover:bg-safari-gold  rounded-b-md"
+                            className={`block px-4 py-2 transition-colors rounded-b-md ${
+                              isActive('/destinations/uganda')
+                                ? "bg-safari-gold/10 text-safari-gold"
+                                : "text-gray-800 hover:bg-safari-gold"
+                            }`}
                             onClick={() => setDestOpen(false)}
                           >
                             Uganda
@@ -104,10 +130,14 @@ const Navigation = () => {
                   >
                     <Link
                       to={link.href}
-                      className="text-white hover:text-safari-gold  transition-colors text-sm font-medium flex items-center space-x-2"
+                      className={`transition-colors text-sm font-medium flex items-center space-x-2 relative ${
+                        isActive(link.href) || isActive('/itineraries')
+                          ? "text-safari-gold after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-[2px] after:bg-safari-gold"
+                          : "text-white hover:text-safari-gold"
+                      }`}
                     >
                       <span>{link.name}</span>
-                      <span className="text-white/80">▾</span>
+                      <span className={isActive(link.href) || isActive('/itineraries') ? "text-safari-gold" : "text-white/80"}>▾</span>
                     </Link>
 
                     {itinerariesOpen && (
@@ -115,21 +145,33 @@ const Navigation = () => {
                         <div className="bg-white rounded-md shadow-lg">
                           <Link
                             to="/itineraries/rwanda"
-                            className="block px-4 py-2 text-gray-800 hover:bg-safari-gold  rounded-t-md"
+                            className={`block px-4 py-2 transition-colors rounded-t-md ${
+                              isActive('/itineraries/rwanda')
+                                ? "bg-safari-gold/10 text-safari-gold"
+                                : "text-gray-800 hover:bg-safari-gold"
+                            }`}
                             onClick={() => setItinerariesOpen(false)}
                           >
                             Rwanda
                           </Link>
                           <Link
                             to="/itineraries/uganda"
-                            className="block px-4 py-2 text-gray-800 hover:bg-safari-gold"
+                            className={`block px-4 py-2 transition-colors ${
+                              isActive('/itineraries/uganda')
+                                ? "bg-safari-gold/10 text-safari-gold"
+                                : "text-gray-800 hover:bg-safari-gold"
+                            }`}
                             onClick={() => setItinerariesOpen(false)}
                           >
                             Uganda
                           </Link>
                           <Link
                             to="/itineraries/packages"
-                            className="block px-4 py-2 text-gray-800 hover:bg-safari-gold  rounded-b-md"
+                            className={`block px-4 py-2 transition-colors rounded-b-md ${
+                              isActive('/itineraries/packages')
+                                ? "bg-safari-gold/10 text-safari-gold"
+                                : "text-gray-800 hover:bg-safari-gold"
+                            }`}
                             onClick={() => setItinerariesOpen(false)}
                           >
                             Packages
@@ -145,7 +187,11 @@ const Navigation = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="text-white hover:text-safari-gold  transition-colors text-sm font-medium"
+                  className={`text-sm font-medium transition-colors relative ${
+                    isActive(link.href)
+                      ? "text-safari-gold after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-[2px] after:bg-safari-gold"
+                      : "text-white hover:text-safari-gold"
+                  }`}
                 >
                   {link.name}
                 </Link>
@@ -156,7 +202,9 @@ const Navigation = () => {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <a 
-              href="https://calendar.app.google/5sk8bniciQQXXXRk9"
+
+
+href="https://calendar.app.google/5sk8bniciQQXXXRk9"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -194,10 +242,14 @@ const Navigation = () => {
                   <div key={link.name}>
                     <button
                       onClick={() => setIsMobileDestOpen(!isMobileDestOpen)}
-                      className="w-full text-left py-3 text-white hover:text-yellow-400 transition-colors flex items-center justify-between"
+                      className={`w-full text-left py-3 transition-colors flex items-center justify-between ${
+                        isActive('/destinations')
+                          ? "text-safari-gold"
+                          : "text-white hover:text-yellow-400"
+                      }`}
                     >
                       <span>{link.name}</span>
-                      <span className="text-white/80">
+                      <span className={isActive('/destinations') ? "text-safari-gold" : "text-white/80"}>
                         {isMobileDestOpen ? "▴" : "▾"}
                       </span>
                     </button>
@@ -206,14 +258,22 @@ const Navigation = () => {
                       <div className="pl-4">
                         <Link
                           to="/destinations/rwanda"
-                          className="block py-2 text-white/90 hover:text-yellow-400"
+                          className={`block py-2 transition-colors ${
+                            isActive('/destinations/rwanda')
+                              ? "text-safari-gold font-medium"
+                              : "text-white/90 hover:text-yellow-400"
+                          }`}
                           onClick={() => setIsOpen(false)}
                         >
                           Rwanda
                         </Link>
                         <Link
                           to="/destinations/uganda"
-                          className="block py-2 text-white/90 hover:text-yellow-400"
+                          className={`block py-2 transition-colors ${
+                            isActive('/destinations/uganda')
+                              ? "text-safari-gold font-medium"
+                              : "text-white/90 hover:text-yellow-400"
+                          }`}
                           onClick={() => setIsOpen(false)}
                         >
                           Uganda
@@ -231,10 +291,14 @@ const Navigation = () => {
                       onClick={() =>
                         setIsMobileItinerariesOpen(!isMobileItinerariesOpen)
                       }
-                      className="w-full text-left py-3 text-white hover:text-yellow-400 transition-colors flex items-center justify-between"
+                      className={`w-full text-left py-3 transition-colors flex items-center justify-between ${
+                        isActive('/itineraries')
+                          ? "text-safari-gold"
+                          : "text-white hover:text-yellow-400"
+                      }`}
                     >
                       <span>{link.name}</span>
-                      <span className="text-white/80">
+                      <span className={isActive('/itineraries') ? "text-safari-gold" : "text-white/80"}>
                         {isMobileItinerariesOpen ? "▴" : "▾"}
                       </span>
                     </button>
@@ -243,21 +307,33 @@ const Navigation = () => {
                       <div className="pl-4">
                         <Link
                           to="/itineraries/rwanda"
-                          className="block py-2 text-white/90 hover:text-yellow-400"
+                          className={`block py-2 transition-colors ${
+                            isActive('/itineraries/rwanda')
+                              ? "text-safari-gold font-medium"
+                              : "text-white/90 hover:text-yellow-400"
+                          }`}
                           onClick={() => setIsOpen(false)}
                         >
                           Rwanda
                         </Link>
                         <Link
                           to="/itineraries/uganda"
-                          className="block py-2 text-white/90 hover:text-yellow-400"
+                          className={`block py-2 transition-colors ${
+                            isActive('/itineraries/uganda')
+                              ? "text-safari-gold font-medium"
+                              : "text-white/90 hover:text-yellow-400"
+                          }`}
                           onClick={() => setIsOpen(false)}
                         >
                           Uganda
                         </Link>
                         <Link
                           to="/itineraries/packages"
-                          className="block py-2 text-white/90 hover:text-yellow-400"
+                          className={`block py-2 transition-colors ${
+                            isActive('/itineraries/packages')
+                              ? "text-safari-gold font-medium"
+                              : "text-white/90 hover:text-yellow-400"
+                          }`}
                           onClick={() => setIsOpen(false)}
                         >
                           Packages
@@ -272,7 +348,11 @@ const Navigation = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="block py-3 text-white hover:text-yellow-400 transition-colors"
+                  className={`block py-3 transition-colors ${
+                    isActive(link.href)
+                      ? "text-safari-gold font-medium"
+                      : "text-white hover:text-yellow-400"
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}

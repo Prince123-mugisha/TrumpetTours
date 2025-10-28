@@ -18,10 +18,10 @@ const WhyUs = () => {
               <span className="text-safari-gold font-medium">WHY CHOOSE US</span>
             </div>
             <h2 className="mt-6 text-4xl md:text-5xl font-bold">
-              Your Trusted Safari Partner Since 2015
+              Your Trusted Safari Partner Since 2009
             </h2>
             <p className="mt-4 text-gray-600 text-lg">
-              With over 10 years of expertise, we craft extraordinary East African adventures while supporting
+              With over 15 years of expertise, we craft extraordinary East African adventures while supporting
               local communities and conservation efforts.
             </p>
           </div>
@@ -33,8 +33,8 @@ const WhyUs = () => {
                 <Trophy className="text-safari-gold" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Safari Expertise</h3>
-              <p className="text-gray-600 text-sm">10 years of experience crafting exceptional safari adventures across East Africa.</p>
-              <div className="mt-4 inline-flex text-xs px-3 py-1 rounded-full bg-safari-gold/10 border border-safari-gold/30 text-safari-darker">10+ Years</div>
+              <p className="text-gray-600 text-sm">15+ years of experience crafting exceptional safari adventures across East Africa.</p>
+              <div className="mt-4 inline-flex text-xs px-3 py-1 rounded-full bg-safari-gold/10 border border-safari-gold/30 text-safari-darker">15+ Years</div>
             </Card>
 
             <Card className="bg-white border border-gray-200 p-6 shadow-sm">
