@@ -45,11 +45,11 @@ const Destination = () => {
               <div className="text-sm text-white">Countries</div>
             </Card>
             <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">8+</div>
+              <div className="text-4xl font-bold text-white">8</div>
               <div className="text-sm text-white">National Parks</div>
             </Card>
             <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">
-              <div className="text-4xl font-bold text-white">20+</div>
+              <div className="text-4xl font-bold text-white">20</div>
               <div className="text-sm text-white">Tour Options</div>
             </Card>
             <Card className="bg-white/10 backdrop-blur border-white/20 p-6 text-center text-white">

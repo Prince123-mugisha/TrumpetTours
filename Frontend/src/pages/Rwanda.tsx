@@ -123,7 +123,7 @@ const Rwanda = () => {
     <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
       {[
         { value: "4", label: "National Parks" },
-        { value: "1000+", label: "Mountain Gorillas" },
+        { value: "1000", label: "Mountain Gorillas" },
         { value: "8", label: "Museums & Cultural Sites" },
       ].map((item, i) => (
         <Card

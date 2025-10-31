@@ -125,9 +125,9 @@ const Uganda = () => {
     {/* Statistics Cards */}
     <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
       {[
-        { value: "10+", label: "National Parks" },
-        { value: "1,200+", label: "Bird Species" },
-        { value: "5+", label: "UNESCO Heritage Sites" },
+        { value: "10", label: "National Parks" },
+        { value: "1,200", label: "Bird Species" },
+        { value: "5", label: "UNESCO Heritage Sites" },
       ].map((item, i) => (
         <Card
           key={i}
