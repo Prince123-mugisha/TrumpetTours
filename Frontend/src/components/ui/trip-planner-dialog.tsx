@@ -12,6 +12,10 @@ const TripPlannerDialog = ({ open, onOpenChange }: TripPlannerDialogProps) => {
   const [error, setError] = useState<string | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [showRwandaOtherInput, setShowRwandaOtherInput] = useState(false)
+  const [showUgandaOtherInput, setShowUgandaOtherInput] = useState(false)
+  const [otherRwandaDestination, setOtherRwandaDestination] = useState("")
+  const [otherUgandaDestination, setOtherUgandaDestination] = useState("")
 
   const handleOpenChange = (open: boolean) => {
     if (!open) {
@@ -19,6 +23,10 @@ const TripPlannerDialog = ({ open, onOpenChange }: TripPlannerDialogProps) => {
       setError(null)
       setArrivalDate("")
       setDepartureDate("")
+      setShowRwandaOtherInput(false)
+      setShowUgandaOtherInput(false)
+      setOtherRwandaDestination("")
+      setOtherUgandaDestination("")
     }
     onOpenChange(open)
   }
@@ -201,6 +209,38 @@ const TripPlannerDialog = ({ open, onOpenChange }: TripPlannerDialogProps) => {
                               </div>
                             ))}
                         </div>
+
+                        {/* Other Rwanda Destinations Option */}
+                        <div className="mt-4">
+                          <div className="flex items-center space-x-2">
+                            <input
+                              type="checkbox"
+                              id="other-rwanda-destination"
+                              checked={showRwandaOtherInput}
+                              onChange={(e) => {
+                                setShowRwandaOtherInput(e.target.checked)
+                                if (!e.target.checked) {
+                                  setOtherRwandaDestination("")
+                                }
+                              }}
+                              className="w-4 h-4"
+                            />
+                            <label htmlFor="other-rwanda-destination" className="text-sm">Other Rwanda Destination</label>
+                          </div>
+                          
+                          {showRwandaOtherInput && (
+                            <div className="mt-2 ml-6">
+                              <input
+                                type="text"
+                                name="other-rwanda-destination"
+                                value={otherRwandaDestination}
+                                onChange={(e) => setOtherRwandaDestination(e.target.value)}
+                                placeholder="Please specify your desired Rwanda destination"
+                                className="w-full px-3 py-2 border rounded-lg text-sm"
+                              />
+                            </div>
+                          )}
+                        </div>
                       </div>
 
                       {/* Uganda Destinations */}
@@ -222,6 +262,38 @@ const TripPlannerDialog = ({ open, onOpenChange }: TripPlannerDialogProps) => {
                                 <label htmlFor={a.id} className="text-sm">{a.label}</label>
                               </div>
                             ))}
+                        </div>
+
+                        {/* Other Destinations Option */}
+                        <div className="mt-4">
+                          <div className="flex items-center space-x-2">
+                            <input
+                              type="checkbox"
+                              id="other-destination"
+                              checked={showUgandaOtherInput}
+                              onChange={(e) => {
+                                setShowUgandaOtherInput(e.target.checked)
+                                if (!e.target.checked) {
+                                  setOtherUgandaDestination("")
+                                }
+                              }}
+                              className="w-4 h-4"
+                            />
+                            <label htmlFor="other-destination" className="text-sm">Other Uganda Destination</label>
+                          </div>
+                          
+                          {showUgandaOtherInput && (
+                            <div className="mt-2 ml-6">
+                              <input
+                                type="text"
+                                name="other-uganda-destination"
+                                value={otherUgandaDestination}
+                                onChange={(e) => setOtherUgandaDestination(e.target.value)}
+                                placeholder="Please specify your desired destination"
+                                className="w-full px-3 py-2 border rounded-lg text-sm"
+                              />
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
